@@ -1,0 +1,186 @@
+<div class="productDatails">
+	<ion-header-bar class="row item-icon-right item-icon-left " >
+		<div class="col">
+			<i  ng-click="goPage('footer.home')" class=" button button-clear icon ion-chevron-left button-light"></i>
+		</div>
+		<div class="col center fr" ng-repeat="item in productNavdata track by $index" ng-click="cut($index)" ng-class="{'productNav':item.bool}">{{item.name}}</div>
+		<div class="col">
+			<i class="ba button button-clear icon ion-merge button-light"></i>
+		</div>
+	</ion-header-bar >
+	<ion-content ng-switch="type">
+		<div ng-switch-when="commodity">
+			<div>
+				<img src="./images/Img_wddn_ckwl_1@3x.png"/>
+			</div>
+			<div class="padding">
+				<h5>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣5053 </h5>
+				<p class="assertive">¥ 188.00 </p>
+				<p>
+					COLORS
+					<span class="size1">1</span>
+					<span class="size1">2</span>
+					<span class="size1">3</span>
+				</p>
+				<p>
+					尺寸 
+					<span class="size">S</span>
+					<span class="size">M</span>
+					<span class="size">L</span>
+					<span class="size">XL</span>
+				</p>
+				<p >
+					数量 
+					<span class="plus" ng-click="subtrackNuber()">-</span>
+					<span class="sum" >
+						<input type="text" ng-model="tradeNumber"/> 
+					</span>
+					<span class="plus" ng-click="tradePlus()">+</span>
+				</p>
+				<p >快递：免费 <span >月销量：998 </span><span > 累计评价：1332</span></p>
+			</div>
+			<div class="row nav">
+			    <div class="col" ng-class="assertive" ng-click="clear()">
+			  	  <a class="tab-item">
+				    <img class="icon ion-star" class="full-image" ng-src="./images/icons/productdetails_btn_icon_1@3x.png"/>
+				    服务保证
+				  </a>
+				</div>
+			  	<div class="col" ng-class="assertive" ng-click="newProduct()">
+			  	  <a class="tab-item">
+				    <img class="icon ion-star" class="full-image" ng-src="./images/icons/productdetails_btn_icon_2@3x.png"/>
+				    七天包退
+				  </a>
+				</div>
+			  	<div class="col" ng-class="assertive" ng-click="clothing()"> 
+			  	  <a class="tab-item">
+				    <img class="icon ion-star" class="full-image" ng-src="./images/icons/productdetails_btn_icon_3@3x.png"/>
+				    赠运费险
+				  </a>
+				</div>
+			  	<div class="col" ng-class="assertive" ng-click="star()">
+			  	  <a class="tab-item">
+				    <img class="icon ion-star" class="full-image" ng-src="./images/icons/productdetails_btn_icon_4@3x.png"/>
+				    极速退款
+				  </a>
+				</div>
+			</div>
+		</div>
+
+		<div ng-switch-when="comment">
+			<div class="row box">
+				<div class="col"></div>
+				<div class="col center">商品信息</div>
+				<div class="col center">商品参数</div>
+				<div class="col"></div>
+			</div>
+
+			<div class="row ">
+				<div class="col col-60 product">
+					<h5>产品号:HMM5053</h5>
+					<p>面料成分：47%涤纶53%棉</p>
+					<p>洗涤说明：建议冷水手洗，不可长时间浸泡，不可漂白</p>
+				</div>
+				<div class="col c0l-40">
+					<img class="full-image img" ng-src="./images/Img_productdetails@3x.png"/>
+				</div>
+			</div>
+
+			<div ng-repeat="item in datails track by $index">
+				<div class="row row-wrap">
+					<div class="col col-50 center">{{item.name}}</div>
+					<div class="col col-50 center">{{item.name1}}</div>
+				</div>
+				<div class="row row-wrap">
+					<div class="col col-50">
+						<div class="row">
+							<div class="col xiushen">{{item.size1}}</div>
+							<div class="col xiushen dark-bg">{{item.siz2}}</div>
+							<div class="col xiushen">{{item.size3}}</div>
+							<div class="col xiushen">{{item.size4s}}</div>
+						</div>
+					</div>
+					<div class="col col-50">
+						<div class="row">
+							<div class="col xiushen">{{item.size5}}</div>
+							<div class="col xiushen dark-bg">{{item.siz6}}</div>
+							<div class="col xiushen">{{item.size7}}</div>
+							<div class="col xiushen">{{item.size8}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div><img class="full-image" src="./images/datails.png"/></div>
+		</div>
+
+		<div ng-switch-when="datail">
+			<ion-list>
+				<ion-checkbox>
+				只看当前商品
+					<h6 class="fr h6 assertive"><span class="assertive">好评100%</span></h6>
+				</ion-checkbox>
+
+				<div class="row row-wrap xiushen pl">
+					<div class="col col-25 p center "><span class="assertive">全部999</span></div>
+					<div class="col col-25 p center assertive-bg"><span class="light">好评999</span></div>
+					<div class="col col-25 p center assertive-bg"><span class="light">中评0</span></div>
+					<div class="col col-25 p center assertive-bg"><span class="light">差评0</span></div>
+					<div class="col col-25 p center assertive-bg"><span class="light">有图的</span></div>
+				</div>
+			</ion-list>
+			<ion-list ng-repeat="item in dataReply track by $index" >
+				<ion-item  class="item-avatar item-text-wrap">
+					<img class="assertive-bg" src="./images/icons/home_wd_icon_9@3x.png"/>
+					<h3>{{item.name}}</h3>
+					<p>
+						<i class="icon assertive ion-android-star-outline"></i>
+						<i class="icon assertive ion-android-star-outline"></i>
+						<i class="icon assertive ion-android-star-outline"></i>
+						<i class="icon assertive ion-android-star-outline"></i>
+						<i class="icon assertive ion-android-star-outline"></i>
+					</p>
+					<p>{{item.reply}}</p>
+					<p>{{item.number}}</p>
+					<p>{{item.date}}
+						<span class="fr"><i class="icon ion-chatbox-working"></i> <span>1</span></span>
+						<span class="fr"><i class="icon ion-thumbsup"></i> <span>1</span></span>
+					</p>
+		
+				</ion-item>
+				<ion-item  class="item-avatar item-text-wrap">
+					<img class="assertive-bg" src="./images/icons/home_wd_icon_9@3x.png"/>
+					<h3>{{item.name1}}</h3>
+					<p class="reply">
+						{{item.reply1}}
+					</p>
+				</ion-item>
+			</ion-list>
+
+		</div>
+
+	</ion-content>
+	<ion-item class="row foo">
+		<div class="col col-33">
+			<div class="row">
+				<div class="col ">
+					<div class="imgs center">
+						<img src="./images/icons/productdetails_icon_kefu@3x.png"/>
+					</div>
+					<p>
+						<span class="light">客服</span>
+					</p>
+				</div>
+				<div class="col center">
+					<div class="imgs">
+						<img src="./images/icons/productdetails_icon_shouchang@3x.png"/>
+					</div>
+					<p>
+						<span class="light">收藏</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col col-33 light center "><span>加入购物车</span></div>
+		<div class="col col-33 light center "><span ui-sref="payOrder" >立即购买</span></div>
+	</ion-item>
+</div>

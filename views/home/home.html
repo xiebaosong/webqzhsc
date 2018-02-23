@@ -1,0 +1,170 @@
+<div class="home">
+	<ion-header-bar align-title="left" class="item-input-inset">
+		<i class="button button-clear icon ion-ios-search button-light"></i>
+		  <label class="item-input-wrapper">
+      		<input ng-click="search()" type="text" placeholder="想买什么"/>
+    	  </label>
+		<i class="button button-clear icon ion-chatbox-working button-light"></i>
+	</ion-header-bar>
+
+	<ion-content ng-switch="type">
+		<ion-slide-box does-continue="{{slide.doesContinue}}" auto-play="slide.autoPlay" slide-interval="{{slide.intervalTime}}" show-pager="{{slide.showPager}}">
+			<ion-slide ng-repeat="item in dataBanner track by $index">
+				<img class="full-image" ng-src="{{item.img}}" />
+			</ion-slide>
+		</ion-slide-box>
+	<div class="row nav">
+	  <div class="col" ng-class="{'bg':item.bool}"  ng-repeat="item in dataNav track by $index" ng-click="{{item.click}}"
+	  >
+	  	<a class="tab-item" ng-click="homeNav($index)">
+		    <img class="icon" class="full-image" ng-src="{{item.img}}"/>
+		    {{item.name}}
+		  </a>
+		</div>
+	</div>
+	<!-- 明星同款 -->
+	<div ng-switch-when="star">
+		<div class="row color1">
+			<div class="col col-33 col-offset-33 box1">
+				<span class="sdf1">贾乃亮精选</span>
+				<span class="line1">限时抢购9.9-9.10</span>
+			</div>
+		</div>
+
+		<div class="row row-wrap light-bg ">
+			<div class="col col-33 " ng-repeat="item in dataImg track by $index">
+				<div class="box8">
+					<img class="full-image" ng-src="{{item.img}}"/>
+				</div>
+				<i class="title">{{item.name}}</i>
+				<p class="title">{{item.plice}}</p>
+				<div class="box3"></div>
+				<div class="box4">限时买3送1</div>
+				<div class="box5">128元</div>
+			</div>
+		</div>
+
+		<div class="row color">
+			<div class="col col-33 col-offset-33 box">
+				<p class="sdf">热销</p>
+				<p class="line"></p>
+			</div>
+		</div>
+
+		<div class="row row-wrap light-bg">
+			<div class="col col-33" ng-repeat="item in dataImg track by $index">
+				<img class="full-image" ng-src="{{item.img}}"/>
+				<i class="title">{{item.name}}</i>
+				<p class="title">{{item.plice}}</p>
+				<div class="box3"></div>
+				<div class="box4">限时买3送1</div>
+				<div class="box5">128元</div>
+			</div>
+		</div>
+	</div>
+	<!-- 衣着搭配 -->
+	<div ng-switch-when="clothing">
+		<div class="box7">
+			<img class="full-image" src="./images/yizhou.png"/>
+		</div>
+		<div class="box7">
+			<a class="item item-icon-left" href="#">
+    			<i class="icon ion-navigate"></i>
+    			搭配指南
+  			</a>
+		</div>
+		<div class="box7">
+			<img class="full-image" src="./images/yizhou1.png"/>
+		</div>
+	</div>
+	<!-- 新品上市 -->
+	<div ng-switch-when="newProduct">
+		<div class="box7 row row-wrap">
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_xpss_1@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_xpss_1@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_xpss_1@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_xpss_1@3x.png"/>
+			</div>
+			
+		</div>
+		<div class="box7">
+			<a class="item item-icon-left" href="#">
+    			<i class="icon ion-navigate assertive"></i>
+    			搭配指南
+  			</a>
+		</div>
+		<div class="box7">
+			<img class="full-image" src="./images/yizhou1.png"/>
+		</div>
+	</div>
+	<!-- 清仓专区 -->
+	<div ng-switch-when="clear">
+		<div class="box7">
+			<a class="item item-icon-left" href="#">
+    			<i class="icon ion-ribbon-b assertive-bg light"></i>
+    			清仓专区
+  			</a>
+		</div>
+		<div class="box7 row row-wrap">
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_qczq_1@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_qczq_2@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_qczq_3@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_qczq_4@3x.png"/>
+			</div>
+		</div>
+		<div class="box7">
+			<a class="item item-icon-left" href="#">
+    			<i class="icon ion-ribbon-b assertive-bg light"></i>
+    			精选良品
+  			</a>
+		</div>
+
+		<div class="box7 row row-wrap">
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_qczq_5@3x.png">
+			</div>
+			<div class="col col-50">
+				<img class="full-image jx" src="./images/jx.png"/>
+				<img class="full-image jx" src="./images/jx1.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_home_qczq_6@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image jx" src="./images/jx2.png"/>
+				<img class="full-image jx" src="./images/jx3.png"/>
+			</div>
+		</div>
+		<div class="box7">
+			<a class="item item-icon-left" href="#">
+    			<i class="icon ion-ribbon-b assertive-bg light"></i>
+    			猜你喜欢
+  			</a>
+		</div>
+		<div class="box7 row row-wrap">
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_list_3@3x.png"/>
+			</div>
+			<div class="col col-50">
+				<img class="full-image" src="./images/Img_list_4@3x.png"/>
+			</div>
+		</div>
+	</div>
+	<div class="footer-padding"></div>	
+	</ion-content>
+	
+</div>

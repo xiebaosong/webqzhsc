@@ -1,0 +1,19 @@
+<div class="personalData">
+
+	<ion-header-bar algin-title="center">
+		<i class="button button-clear button-light icon ion-chevron-left" ui-sref="footer.personalCenter"></i>
+		<h class="title light">修改个人资料</h>
+	</ion-header-bar>
+
+	<ion-content>
+		<ul class="list" ng-repeat="item in data track by $index">
+			<li ng-click="{{item.way}}" class=" li item item-avatar-right item-icon-right">
+				{{item.name}}
+				<img ng-if="item.img" ng-src="{{item.img}}">
+				<p class=" fr content">{{item.content}}</p>
+				<i class="icon ion-chevron-right"></i>
+			</li>
+		</ul>
+	</ion-content>
+</div>
+

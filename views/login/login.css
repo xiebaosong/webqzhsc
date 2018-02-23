@@ -1,0 +1,79 @@
+html,body{
+	height: 100%;
+	position:relative;
+}
+.login{
+	height: 100%;
+	background:url(../../images/dl_bg@3x.png) no-repeat;
+	background-size: cover;
+
+	// height: 100%;
+	// background-image:url(../../images/dl_bg@3x.png);
+	// background-repeat:no-repeat;
+	// background-position: 0 0;
+	// background-size: 100% 100%;
+}
+.login .box{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.login .box h1{
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+}
+.login .clear{
+	margin-top: 150px;
+}
+.login .li{
+	border-bottom: 1px solid #fff;
+	height: 50px;
+}
+// .login input{
+// 	background-color:rbga(0,0,0,0);
+// }
+.login .la{
+	background:rgba(0,0,0,0);
+	border: none;
+	border-bottom: 1px solid #FFF;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.login .la input{
+	margin-left: 30px;
+	color: #fff;
+}
+.login .forget{
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.login .authCode{
+	padding-right: 30px;
+	color: #fff;
+}
+.login .ba{
+	background: rgba(0, 0, 0, 0);
+}
+.login .tu{
+	margin-top: 44px;
+	width: 45px;
+	height: 45px;
+}
+.login .tu img{
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+} 
+.login .tle{
+	padding-top: 10px;
+	width: 300px;
+	text-align: center;
+	color: #FFF;
+}

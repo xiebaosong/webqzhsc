@@ -1,0 +1,8 @@
+<ion-slide-box does-continue="{{slide.doesContinue}}" auto-play="slide.autoPlay" slide-interval="{{slide.intervalTime}}" show-pager="{{slide.showPager}}">
+	<ion-slide ng-repeat="item in data track by $index">
+		<img  class="full-image" ng-src="{{item.img}}"
+		ng-click="cutHome($index)"/>
+	</ion-slide>
+</ion-slide-box>
+		
+

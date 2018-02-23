@@ -1,0 +1,152 @@
+<div class="login" ng-switch="type" >
+	<ion-content>
+			<i ng-click="goLogin()" class="button button-clear icon ion-chevron-left button-light"></i>
+			<div ng-switch-when="forgetThePad" class="bar bar-header ba">
+				<h1 class="title light">忘记密码</h1>
+			</div>
+			<div>
+				<div class="box">
+					<img class="full-image" src="./images/icons/Iocn_dl_1@3x.png"/>
+					<h1>千纸鹤</h1>
+				</div>
+			</div>
+			<div class="clear" >
+				<!-- 注册 -->
+				<div ng-switch-when="register">
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-person"></i>
+				    <input ng-model="userInfo.name" ng-keyup="isValidName()" type="text" placeholder="输入会员名或手机号" />
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-android-lock"></i>
+				    <input ng-model="userInfo.pwd" type="password" placeholder="请输入密码"/>
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-android-lock"></i>
+				    <input ng-model="userInfo.repwd" type="password" placeholder="确认密码"/>
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-android-phone-portrait"></i>
+				    <input ng-model="userInfo.phone" ng-keyup="isPhone()" type="text" placeholder="请输入手机号码"/>
+				    <span class="fr authCode" ng-show="isPass" ng-click="getCode()"><button>获取验证码</button></span>
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-social-angular"></i>
+				    <input ng-model="userInfo.code" type="text" placeholder="请输入验证码"/>
+				  </div> 
+				</div>
+			</div>
+			<div ng-switch-when="register" class="padding " >
+				<div class=" positive button button-block " ng-click="regis()">注册</div>
+			</div>
+			<div class="padding " ng-switch-when="register">
+			<h5 class="tle">说明：注册/登录代表您已经同意《千纸鹤协议》</5>
+		</div>
+		<!-- 忘记密码 -->
+		<div class="clear" >
+			<div ng-switch-when="forgetThePad"  class="padding">
+			  <button class="button button-block" ng-click="phonePwd()">手机修改密码</button>
+			  <button class="button button-block" ng-click="emailPwd()">邮箱修改密码</button>
+			</div>
+			<!-- 邮箱修改密码 -->
+			<div  ng-switch-when="emailPwd">
+			  <div class="item la item-input la item-icon-left">
+			  	<i class="icon ion-android-phone-portrait"></i>
+			    <input type="text" ng-keyup="verifyEmail()" ng-model="emailModificationInfo.email" placeholder="请输邮箱地址"/>
+			    <span class="fr authCode" ng-show="isPass" ng-click="getCode()">|获取验证码</span>
+			  </div>
+
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-social-angular"></i>
+			    <input type="text" ng-model="emailModificationInfo.code" placeholder="请输入验证码"/>
+			  </label>
+
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-person"></i>
+			    <input type="password" ng-model="emailModificationInfo.pwd" placeholder="请输入密码"/>
+			  </label>
+
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-android-lock"></i>
+			    <input type="password" ng-model="emailModificationInfo.repwd"  placeholder="确认入密码"/>
+			  </label>
+ 
+			  	<div class="padding">
+					<div ng-click="commits()" class="button button-block">确认修改密码</div>
+				</div>
+			</div>
+			<!-- 手机号码修改密码 -->
+			<div  ng-switch-when="phonePwd">
+			  <div  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-android-phone-portrait"></i>
+			    <input type="text" ng-keyup="verifyPhone()"  ng-model="phoneModificationInfo.phone" placeholder="请输入手机号码"/>
+			    <span class="fr authCode" ng-show="isPass" ng-click="getCode()">|获取验证码</span>
+			  </div>
+
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-social-angular"></i>
+			    <input type="text" ng-model="phoneModificationInfo.code" placeholder="请输入验证码"/>
+			  </label> 
+
+				<label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-person"></i>
+			    <input type="password"  ng-model="phoneModificationInfo.pwd" placeholder="请输入密码"/>
+			  </label>
+
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-android-lock"></i>
+			    <input type="password"  ng-model="phoneModificationInfo.repwd" placeholder="确认入密码"/>
+			  </label>
+
+			  	<div class="padding">
+					<div ng-click="approve()" class="button button-block">确认修改密码</div>
+				</div>
+			</div>
+			<!-- 登录 -->
+			<div ng-switch-when="login">
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-person"></i>
+			    <input ng-model="loginInfo.phone"  type="text" placeholder="请输入手机号"/>
+			  </label>
+
+			  <label  class="item la item-input la item-icon-left">
+			  	<i class="icon ion-android-lock"></i>
+			    <input ng-model="loginInfo.pwd" type="password" placeholder="请输入密码"/>
+			  </label>
+			  <h6  class="fr light forget" ng-click="forgetThePad()">忘记密码?</h6>
+			</div>
+		</div>
+
+		<div ng-switch-when="login" class="row">
+			<div class="col col-5 "></div>
+			<div class="col col-40 positive button button-small " ng-click="register()">注册</div>
+			<div class="col col-10"></div>
+			<div class="col col-40 positive button button-small " ng-click="login()">登录</div>
+			<div class="col col-5"></div>
+		</div>
+		<div ng-switch-when="login">
+			<div class="bar ba">
+				<h1 class="title light">第三方登录</h1>
+			</div>
+			<div class="row">
+				<div class="col col-33  tu">
+					<img src="./images/icons/Iocn_dl_6@3x.png"/>
+				</div>
+				<div class="col col-33 tu">
+					<img src="./images/icons/Iocn_dl_5@3x.png"/>
+				</div>
+				<div class="col col-33 tu">
+					<img src="./images/icons/Iocn_dl_4@3x.png"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="padding " ng-switch-when="login">
+			<h5 class="tle">说明：注册/登录代表您已经同意《千纸鹤协议》</5>
+		</div>
+	</ion-content>	
+</div>

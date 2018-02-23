@@ -1,0 +1,115 @@
+
+.home .bar .button.button-clear{
+	padding-right: 10px
+}
+.home .tab-item .icon{
+	width: 32px;
+}
+.home .nav{
+	background-color: #0f2030;
+	color: #fff;
+	margin-top: 10px;
+}
+.home .bg{
+	background-color: #f00;
+	color: #fff;
+}
+.home p{
+	text-align: center;
+	color: #f00;
+	margin: -5px 0 -10px;
+	font-size: 12px;
+}
+.home .col-33{
+	overflow: hidden;
+	position: relative;
+}
+.home .box3{
+	width: 50px;
+	height: 50px;
+	background-color: #ff0626;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 30px;
+	right: 15px;
+}
+.home .box4{
+	width: 62px;
+	text-align: center;
+	font-size: 12px;
+	position: absolute;
+	bottom: 35px;
+	right: 11px;
+	color: #f00;
+	background-color: #fff;
+}
+.home .box5{
+	width: 30px;
+	text-align: center;
+	font-size: 12px;
+	position: absolute;
+	bottom: 55px;
+	right: 26px;
+	color: #fff;
+}
+.home i{
+	display: block;
+	text-align: center;
+}
+.home .color{
+	background-color: #fff;
+	margin-top: 10px;
+}
+.home .box{
+	position: relative;
+	height: 44px;
+	background-color: #fff;
+}
+.home .sdf{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	width: 50px;
+	height: 20px;
+	font-size: 18px;
+	color:#f00;
+	background-color: #fff;
+	top: 14px;
+    z-index: 3;
+}
+.home .line{
+	position: absolute;
+	top: 22px;
+	left: 0;
+	margin: 0 auto;
+	border-bottom: 2px solid #F00;
+	width: 100%;
+}
+
+.home .color1{
+	background-color: #fff;
+	height: 50px;
+	margin-top: 10px;
+}
+.home .box1{
+	background-color: #fff;
+}
+.home .sdf1{
+	font-size: 18px;
+	display: block;
+	color: #f00;
+	text-align: center;
+}
+.home .line1{
+	font-size: 10px;
+	display: block;
+	color: #f00;
+	text-align: center;
+}
+.home .box7{
+	margin-top: 10px;
+}
+.home .jx{
+	margin-top: 20px;
+}

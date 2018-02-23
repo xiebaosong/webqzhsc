@@ -1,0 +1,21 @@
+<div class="record">
+	<ion-header-bar argin-title="center">
+		<i class="button button-clear button-light icon ion-chevron-left" ui-sref="footer.personalCenter"></i>
+		<h1 class="title light">购买记录</h1>
+		<span class="fr right light" ng-click="show()">清空</span ><span ui-sref="recordEditor" class="fr right1 light">编辑</span>
+	</ion-header-bar>
+
+	<ion-content>
+		<ul class="list" ng-repeat="item in data track by $index">
+			<li class="item item-divider" ng-if="item.time">
+				{{item.time}}
+			</li>
+			<li class="item item-thumbnail-left item-text-wrap">
+				<img ng-src="{{item.img}}"/>
+				<p>{{item.intro}}</p>
+				<p class="color">{{item.price}}</p>
+			</li>
+			
+		</ul>
+	</ion-content>
+</div>

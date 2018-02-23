@@ -1,0 +1,40 @@
+<div class="site">
+	<ion-header-bar align-title="center">
+		<i class="button button-clear button-light icon ion-chevron-left" ui-sref="footer.personalCenter"></i>
+		<h1 class="title light">我的地址</h1>
+		<i class="button button-clear  button-light ft" ng-click="add()">添加地址</i>
+	</ion-header-bar>
+
+	<ion-content ng-switch="type">
+		<ui ng-switch-when="site" class="list list-inset" ng-repeat="item in data track by $index">
+			<li class="item item-avater item-icon-left item-icon-right" >
+				<i class="icon ion-android-pin" ng-class="item.defaule"></i>
+				<h3>{{item.name}} <span class="fr positive">{{item.moren}}</span></h3>
+				<p>{{item.site}}</p>
+				<p>{{item.phone}}</p>
+				<i class=" icon ion-ios-arrow-right positive"></i>
+			</li>
+		</ui>
+		<ul class="list list-inset" ng-switch-when="add">
+			<li class="item">
+				<div class="item">
+					<i class="icon ion-close-circled"></i>
+				</div>
+				<label class="item item-input item-stacked-label" ng-repeat="item in dataAdd track by $index">
+					<span class="input-label">{{item.name}}</span>
+					<input type="text" name="" placeholder="{{item.value}}">
+				</label>
+				<div class=" item item-toggle">
+					设置默认地址
+					<label class="toggle toggle-positive">
+						<input type="checkbox" name="">
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				</div>
+				<button ng-click="site()" class="button button-positive button-full">确认</button>>
+			</li>
+		</ul>
+	</ion-content>
+</div>

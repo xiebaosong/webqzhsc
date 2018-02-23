@@ -1,0 +1,8 @@
+.productList .color{
+	background-color:#a5937b;
+	height: 20px;
+	width: 70px;
+}
+.productList .bar .button.button-clear{
+	padding-right: 10px
+}

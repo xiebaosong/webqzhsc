@@ -1,0 +1,9 @@
+angular.module('app')
+	.controller('personalCenterController',['$scope',function($scope){
+		$scope.dataLi=[
+			{name:'我的订单',url:'order'},
+			{name:'我的地址',url:'site'},
+			{name:'修改个人资料',url:'personalData'},
+			{name:'购买记录',url:'record'}
+		];
+	}])

@@ -1,0 +1,25 @@
+html,body{
+	height: 100%;
+}
+.search{
+	min-height: 600px;
+	background:url(../../images/dl_bg@3x.png) no-repeat;
+	background-size: cover;
+}
+.search .box{
+	margin-top: 40px;
+}
+.search .se{
+	background: rgba(0, 0, 0, 0);
+	background-color: #4d697f;
+	border: none;
+	color: #fff;
+}
+.search .h4{
+	color: #fff;
+}
+.search .btn{
+	min-height: 30px;
+	width: 90px;
+	line-height: 30px;
+}

@@ -1,0 +1,43 @@
+<div class="discover">
+	<ion-header-bar align-title="left" class="item-input-inset">
+		<i class="button button-clear icon ion-ios-search button-light"></i>
+		  <label class="item-input-wrapper">
+      		<input type="text" placeholder="想买什么"/>
+    	  </label>
+		<i class="button button-clear icon ion-chatbox-working button-light"></i>
+	</ion-header-bar>
+
+  <ion-content>
+	<ion-refresher pulling-text="松开刷新..." on-refresh=
+	"addItem()">
+	</ion-refresher>
+	<div class="row" >
+		<div class="col col-25 center " ng-repeat="item in dataNav track by $index" ng-class="{'nav':item.bool}" ng-click="discoverNav($index)">{{item.name}}</div>
+	</div>
+	<div class="row row-wrap" >
+		<div class="col col-50 box" ng-repeat="item in dataImg track by $index" >
+			<img class="full-image" ng-src="{{item.img}}"/>
+			<p>
+				{{item.presentation}}
+			</p>
+			<span class="span">
+				{{item.price}}
+			</span>
+			<div class="img">
+				<img class="full-image" ng-src="{{item.discount}}"/>
+			</div>
+		</div>
+	</div>
+	<ion-list>
+		<a class="item item-icon-left" href="#">
+    <i class="icon ion-ios-pricetags"></i>
+    猜你喜欢的单品
+  </a>
+	</ion-list>
+	<div class="row row-wrap">
+		<div class="col col-33" ng-repeat="item in dataLike track by $index">
+			<img ng-src="{{item.img}}"/>
+		</div>
+	</div>
+	</ion-content>
+</div>

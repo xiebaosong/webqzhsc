@@ -1,0 +1,23 @@
+<div class="personalCenter">
+	<ion-header-bar>
+		<i class="button button-clear button-light icon ion-chevron-left "></i>
+		<h1 class="title light">个人中心</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="box">
+			<img ng-src="./images/banner4.png">
+			<span class="luck">
+				the Luck Fairy
+				<span class="icon ion-male positive"></span>
+			</span>
+			<p class="grade assertive">会员等级V5</p>
+		</div>
+		<ion-list>
+		   <a class="item item-icon-right li" ui-sref="{{item.url}}" ng-repeat="item in dataLi track by $index">
+    			{{item.name}}
+    		<i class="icon ion-chevron-right"></i>
+  			</a>
+		</ion-list>
+		<button ui-sref="login" class="button button-block  button-light"><span class="positive">退出登录</span></button>
+	</ion-content>
+</div>

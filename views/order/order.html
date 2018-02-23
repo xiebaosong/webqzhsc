@@ -1,0 +1,234 @@
+<div class="order">
+	<ion-header-bar align-title="center">
+		<i class="button button-clear button-light icon ion-chevron-left" ui-sref="footer.personalCenter"></i>
+		<h1 class="title light">我的订单</h1>
+		<i class="button button-clear icon ion-chatbox-working button-light"></i>
+	</ion-header-bar>
+
+	<ion-content ng-switch="type" class="foor">
+		<div class="row row-wrap box light-bg" >
+			<div class="col col-20 " ng-repeat="item in dataNav track by $index" ng-click="cutNav($index)" ng-class="{
+			'nav':item.bool
+		}">{{item.name}}</div>
+		</div>
+		<ion-slide-box show-pager="false"
+		on-slide-changed="cut($index)"
+		active-slide="index"
+		>
+			<ion-slide>
+				<div >
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-item class="it">
+			 				<p>共2件商品</p>
+			 				<p>实付款：<span class="assertive">¥446</span></p>
+			 				<p class="bo">
+			 					<button class="button button-positive fr">付款 </button>
+							<button class="button fr "> 删除订单</button>
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-item class="it">
+			 				<p>共2件商品</p>
+			 				<p>实付款：<span class="assertive">¥446</span></p>
+			 				<p class="bo">
+			 					<button class="button button-positive fr">付款 </button>
+							<button class="button fr "> 删除订单</button>
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+			 	</div>
+		 	</ion-slide>
+		 	<ion-slide>
+		 		<div >
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-item class="it">
+			 				<p>共2件商品</p>
+			 				<p>实付款：<span class="assertive">¥446</span></p>
+			 				<p class="bo">
+			 					<button class="button button-positive fr">立即付款 </button>
+							<button class="button fr "> 删除订单</button>
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-item class="it">
+			 				<p>共2件商品</p>
+			 				<p>实付款：<span class="assertive">¥446</span></p>
+			 				<p class="bo">
+			 					<button class="button button-positive fr">立即付款 </button>
+							<button class="button fr "> 删除订单</button>
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+			 	</div>
+		 	</ion-slide>
+		 	<ion-slide>
+		 		<div >
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+			 			<ion-item class="it">
+			 				<p>共2件商品</p>
+			 				<p>实付款：<span class="assertive">¥446</span></p>
+			 				<p class="bo">
+			 					<button class="button fr button-positive"> 确认收货</button>
+			 					<button class="button button-positive fr">查看物流 </button>
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+			 	</div> 
+		 	</ion-slide>
+		 	<ion-slide>	
+			 	<div >
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+
+						<ion-item class="it">
+			 				<p><span>共1件商品</span> <span> 运费：¥ 0.00</span> <span> 实付：¥ 188.00</span></p>
+			 			</ion-item>
+
+			 			<ion-item class="it">
+			 				<p>共2件商品</p>
+			 				<p>实付款：<span class="assertive">¥446</span></p>
+			 				<p class="bo">
+			 					<button class="button fr button-positive"> 查看物流</button>
+			 					<button class="button button-positive fr">提醒发货 </button>
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+			 	</div>
+		 	</ion-slide>
+		 	<ion-slide>	
+		 		<div >
+					<ion-list class="item-checkbox-right">
+						<ion-checkbox class="order">
+			 				订单编号：2017091711634920
+			 			</ion-checkbox>
+					</ion-list>
+			 		<ion-list class="item-checkbox-right item-thumbnail-left item-text-wrap item-button-right">
+			 			<ion-checkbox class="order op ">
+			 				<img src="./images/Img_gwc_1@3x.png"/>
+			 				<h3>千纸鹤男士针织衫长袖圆领修身条纹毛衣 青年时尚潮流线衣 </h3>
+			 				<p>颜色分类：青黑色  <span>规格：L</span></p>
+			 				<p><span>共1件</span><span>价格：¥ 258.00</span></p>
+			 			</ion-checkbox>
+
+			 			<ion-item class="it">
+			 				<p>共1件商品</p>
+			 				<p>实付款：<span class="assertive">¥258.00</span></p>
+			 				<p class="bo">
+			 					<button ui-sref="reply" class="button fr button-positive"> 评价晒单</button>
+			 					<button class="button fr button-positive" ui-sref="logistics"> 查看物流</button>
+			 					<button class="button button-positive fr">提醒发货 </button>
+
+			 				</p>
+			 				
+			 			</ion-item>
+			 		</ion-list >
+			 	</div>
+		 	</ion-slide>
+		</ion-slide-box>
+	</ion-content>
+</div>

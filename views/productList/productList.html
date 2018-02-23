@@ -1,0 +1,27 @@
+<div class="productList">
+	<ion-header-bar align-title="left" class="item-input-inset">
+		<i ui-sref="footer.classify" class="button button-clear icon ion-chevron-left button-light"></i>
+			<label class="item-input-wrapper">
+				<input type="text" placeholder="想买什么"/>
+			</label>
+		<i class="button button-clear icon ion-ios-search button-light"></i>
+	</ion-header-bar>
+	<ion-content>
+		<div class="row center assertive-bg">
+			<div class="col light">综合<i class="icon ion-arrow-down-b"></i></div>
+			<div class="col">价格</div>
+			<div class="col">销量</div>
+			<div class="col">条件塞选</div>
+		</div>
+
+		<ul class="row row-wrap">
+			<li ng-click="goProductDatails()" class="col col-50" ng-repeat="item in data track by $index">
+				<div><img ng-src="{{item.img}}"></div>
+				<h5>{{item.title}}</h5>
+				<span class="assertive">{{item.price}} </span>
+				<span class="fr  color">{{item.cart}}</span>
+			</li>
+		</ul>
+	</ion-content>
+
+</div>

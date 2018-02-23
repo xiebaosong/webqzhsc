@@ -1,0 +1,47 @@
+<div class="classify">
+<ion-side-menus>
+	<ion-side-menu>
+		<ion-header-bar>
+			<span  class="title">侧边菜单</span>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<ion-toggle>设置</ion-toggle>
+				<ion-radio>开启</ion-radio>
+				<ion-radio>开启</ion-radio>
+				<ion-radio>开启</ion-radio>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+
+	<ion-side-menu-content>
+		<ion-header-bar align-title="left" class="item-input-inset">
+			<i class="button button-clear icon ion-ios-search button-light"></i>
+		  	<label class="item-input-wrapper">
+	  			<input type="text" placeholder="想买什么"/>
+		  	</label>
+			<i class="button button-clear icon ion-chatbox-working button-light"></i>
+		</ion-header-bar>
+
+		<ion-content>
+			<div class="row box">
+				<div class="col col-25 box">
+					<ul>
+						<li ng-class="{'nav':item.bool}" ng-repeat="item in dataLi track by $index" 
+						 ng-click="goClsaaifyList($index)">
+						{{item.font}}
+					</li>
+					</ul>
+				</div>
+			<!-- 三级路由 -->
+				<div class="col col-75" ui-view >
+					
+				</div>	
+			</div>
+		</ion-content>
+	</ion-side-menu-content>
+</ion-side-menus>
+
+
+
+</div>

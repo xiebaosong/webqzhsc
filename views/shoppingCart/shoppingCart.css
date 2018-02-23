@@ -1,0 +1,22 @@
+.shoppingCart .bar .button.button-clear{
+	padding-right: 10px
+}
+.shoppingCart .box{
+	height: 40px;
+	line-height: 40px;
+}
+.shoppingCart .sp{
+	margin: 0 5px;
+}
+.shoppingCart .font{
+	font-size: 18px;
+}
+.shoppingCart .f{
+	width: 18px;
+	height: 18px;
+ 	background-color: #b9b7b7;
+ 	text-align: center;
+}
+.shoppingCart .bj{
+	background-color: #fff;
+}

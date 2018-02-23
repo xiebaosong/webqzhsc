@@ -1,0 +1,7 @@
+.personalData .item-avatar-right>img:first-child{
+	top: 5px;
+	right:70px;
+}
+.personalData .li{
+	min-height: 50px;
+}

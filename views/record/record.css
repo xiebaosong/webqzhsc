@@ -1,0 +1,14 @@
+.record .color{
+	color: #f00 !important;
+}
+
+.record .right{
+	position: absolute;
+	right: 5px;
+	top: 11px;
+}
+.record .right1{
+	position: absolute;
+	right: 40px;
+	top: 11px;
+}

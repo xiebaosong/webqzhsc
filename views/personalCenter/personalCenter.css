@@ -1,0 +1,24 @@
+.personalCenter .box{
+	position: relative;
+}
+.personalCenter .box .luck{
+	display: block;
+	position: absolute;
+	width: 120px;
+	left: 0;
+	right: 0;
+	bottom: 25px;
+	margin:0 auto;
+}
+.personalCenter .box .grade{
+	display: block;
+	width: 90px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	margin:0 auto;
+}
+.personalCenter .li{
+	margin-bottom: 5px;
+}

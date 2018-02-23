@@ -1,0 +1,30 @@
+<div class="search">
+	<ion-content>
+	<div class="padding box">
+	  <label class="item item-input se">
+	    <i class="icon ion-ios-search-strong fr"></i>
+	    <input ng-click="home()" type="text" placeholder=""/>
+	  </label>
+		  <h3  class="h4">热门搜索</h4>
+		  <div class="row row-wrap">
+		  	<div class="col col-33" ng-repeat="item in hot track by $index" >
+		  		<div class="button button-outline button-light btn">{{item.name}}</div>
+		  	</div>
+		  </div>
+		  <h3 class="h4">本季流行</h4>
+		  <div class="row row-wrap">
+		  	<div class="col col-33" ng-repeat="item in season track by $index" >
+		  		<div class="button button-outline button-light btn">{{item.name}}</div>
+		  	</div>
+		  </div>
+		  <h3 class="h4">明星同款</h4>
+		  <div class="row row-wrap">
+		  	<div class="col col-33" ng-repeat="item in star track by $index" >
+		  		<div class="button button-outline button-light btn">{{item.name}}</div>
+		  	</div>
+		  </div>
+	</div>
+
+
+	</ion-content>
+</div>

@@ -1,0 +1,29 @@
+<div class="orderNull">
+		<ion-header-bar align-title="center">
+		<i class="button button-clear button-light icon ion-chevron-left" ui-sref="footer.personalCenter"></i>
+		<h1 class="title light">我的订单</h1>
+		<i class="button button-clear icon ion-chatbox-working button-light"></i>
+	</ion-header-bar>
+
+	<ion-content class="foor">
+		<div class="row box light-bg">
+			<div class="col nav center" ng-click="order()">全部订单</div>
+			<div class="col nav center" ng-click="payment()">待付款</div>
+			<div class="col nav center" ng-click="deliverGoods()">待发货</div>
+			<div class="col nav center" ng-click="goods()">待收货</div>
+			<div class="col nav center" ng-click="reply()">待评价</div>
+		</div>
+
+		<div class="row box1">
+			<div class="col col-33 col-offset-33">
+				<img class="full-image" src="./images/nullcart.png"/>
+			</div>
+		</div>
+		<h3 class="center">您还没有相关订单</h3>
+		<p class="center padding">可以去看看有哪些想买的</p>
+		<div class="row">
+			<button class="button button-positive center col-33 col-offset-33" ui-sref="footer.classify">  随便逛逛  </button>
+		</div>
+		
+	</ion-content>
+</div>

@@ -1,0 +1,33 @@
+.order .box{
+	margin-bottom: 10px;
+}
+.order .nav{
+	overflow: hidden;
+	text-align: center;
+	font-size: 13px;
+	border-bottom: 1px solid #f00;
+	box-sizing: border-box;
+}
+.order .order{
+	padding-left: 0 !important;
+}
+.order .op{
+	margin-top: -30px;
+}
+.order .it{
+	position: relative;
+}
+.order .bo{
+	position: absolute;
+	right:0;
+	top: 15px;
+}
+.order .b{
+	margin-left: 15px;
+}
+.order .foor{
+    margin-bottom: 0px !important;
+}
+
+
+
