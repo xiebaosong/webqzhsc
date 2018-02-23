@@ -9,25 +9,31 @@
 	<ion-content>
 		<div ng-repeat="item in data track by $index">
 			<div class="box">
-				<span class="sp">{{item.name}}</span> <span class="icon ion-chevron-right"></span><span class="fr sp">领劵 </span><span class="fr sp"> 编辑</span>
+				<span class="sp">{{item.name}}</span> <span class="icon ion-chevron-right"></span><span class="fr sp">领劵 </span><span class="fr sp" ng-click="delete($index)"> 删除</span>
 			</div>	
 			<ion-list>
-				<ion-checkbox ng-model="filter"></ion-checkbox>
-				<a class="item item-thumbnail-left" >
+				  <input class="fl chec" type="checkbox" ng-model="item.check" ng-click="changeCheckbox()"/>
+					<div class="item item-thumbnail-left price" >
 			      <img ng-src="{{item.img}}"/>
 			      <h2>{{item.presentation}}</h2>
 			      <h2>{{item.presenta}}</h2>
 			      <p class="sp"><span>{{item.size}}</span><span>{{item.color}}</span></p>
-			      <p class="sp font"><span class="assertive">{{item.price}}</span><span class="fr f icon ion-android-add"></span><span class="fr f bj">3</span><span class="icon  ion-android-remove f fr"></span></p>
-		    	</a>          
+				 		<p class="sp font pri">
+				     	<span class="assertive fl">合计:￥</span><input type="" name="" class="assertive input fl" value="{{item.price}}" ng-model="item.price" />
+				     	<span class="fr f icon ion-android-add" ng-click="add($index)"></span>
+				     	<input type="" name="" class="fr f bj" ng-model="item.numb" />
+				     	<span class="icon  ion-android-remove f fr" ng-click="reduce($index)"></span>
+				    </p>    
+			    </div>         
 			</ion-list>
 		</div>
-		<div class="item">
-			<ion-checkbox ng-click="check()" ng-model="filter">
+		<div class="item item-top">
+			<div>
 				全选
-				<span class="assertive-bg fr"><span class="light">去结算</span> </span>
-				<span class="fr"> 合计:589</span>
-			</ion-checkbox>
+				<input class="fl che" type="checkbox"  ng-model="allCheck"   ng-click="allSelect(allCheck)"   />
+				<span class="assertive-bg fr closing"><span class="light">去结算 </span> </span>
+				<p class="fr"><span class="assertive">合计:￥</span><input class="fr sum assertive" ng-model="sum" type="" name=""/> </p>
+			</div>
 
 		</div>
 	</ion-content>

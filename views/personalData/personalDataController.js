@@ -12,11 +12,9 @@ angular.module('app',['ionic'])
 		modal.initModal($scope);
 
 		$scope.comment=function(){
-			
 			modal.openModal($scope);
 		}
 		$scope.close=function(){
-			
 			modal.closeModal($scope);
 		}
 

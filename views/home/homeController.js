@@ -8,10 +8,16 @@ angular.module('app')
 
 		$scope.dataNav=[
 			{
+				name:'明星同款',
+				img:'./images/icons/home_mxtk_icon_1@3x.png',
+				click:'star($index)',
+				bool:true
+			},
+			{
 				name:'清仓专区',
 				img:'./images/icons/home_qczq_icon_1@3x.png',
 				click:'clear($index)',
-				bool:true
+				bool:false
 			},
 			{
 				name:'新品上市',
@@ -24,13 +30,8 @@ angular.module('app')
 				img:'./images/icons/home_zydp_icon_3@3x.png',
 				click:'clothing($index)',
 				bool:false
-			},
-			{
-				name:'明星同款',
-				img:'./images/icons/home_mxtk_icon_1@3x.png',
-				click:'star($index)',
-				bool:false
-			},
+			}
+
 		];
 
 		$scope.dataImg = [
@@ -76,11 +77,9 @@ angular.module('app')
 			showPager: true
 		};
 
-		$scope.type='clear';
+		$scope.type='star';
 		$scope.clear=function(){
-			if($scope.type='clear') {
-				return;
-			}
+			
 			$scope.type='clear';
 		}
 		$scope.newProduct=function(){
@@ -90,6 +89,9 @@ angular.module('app')
 			$scope.type='clothing';
 		}
 		$scope.star=function(){
+			if($scope.type='star') {
+				return;
+			}
 			$scope.type='star';
 		}
 

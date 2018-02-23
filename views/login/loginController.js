@@ -50,8 +50,9 @@ angular.module('app')
 		$scope.isPhone=function(){
 			$scope.isPass = validForm.validPhone($scope.userInfo.phone);
 		}
-		//获取注册验证码
+		//获取验证码
 		$scope.getCode = function () {
+			console.log($scope.userInfo.phone)
 			Tip.loadTips.showLoading();
 			API.fetchGet('http://127.0.0.1:9000/message', {phone: $scope.userInfo.phone})
 				.then(function (data) {
@@ -209,7 +210,7 @@ angular.module('app')
 		}
 
 		//手机修改密码获取验证码
-		$scope.getCode = function () {
+		$scope.getPhoneCode= function () {
 			Tip.loadTips.showLoading();
 			API.fetchGet('http://127.0.0.1:9000/message', {phone: $scope.phoneModificationInfo.phone})
 				.then(function (data) {
@@ -269,9 +270,9 @@ angular.module('app')
 							$scope.type='login';
 							Tip.showTip('修改密码成功');
 						} else if(data.data.statusCode == 401) {
-							Tip.showTip('修改密码失败，请再次修改');
+							Tip.showTip('修改密码失败');
 						}
-						
+						Tip.loadTips.hideLoading();
 					})
 					.catch(function (err) {
 						
@@ -296,6 +297,29 @@ angular.module('app')
 			$scope.isPass = validForm.validEmail($scope.emailModificationInfo.email);
 		}
 
+		//获取邮箱验证码
+		$scope.gitEmailCode=function(){
+			if(!isValidEmail()){return}
+			Tip.loadTips.showLoading();
+			API.fetchPost('http://127.0.0.1:9000/emailcode', $scope.emailModificationInfo)
+				.then(function (data) {
+					console.log(data)
+					$scope.EmailCode=data.data.validCode
+					Tip.loadTips.hideLoading();
+						if(data.data.statusCode==500){
+							Tip.showTip(data.data.msg);
+						}else if(data.data.statusCode==501){
+							Tip.showTip(data.data.msg)
+						 }
+					
+				})
+				.catch(function (err) {
+					Tip.loadTips.hideLoading();
+					Tip.showTip("获取验证码失败，请稍后再试");
+				})
+		}
+		
+
 		function isValidEmail () {
 			if (!validForm.isNotEmpty($scope.emailModificationInfo.email)) {
 				Tip.showTip('邮箱不能为空');
@@ -307,14 +331,14 @@ angular.module('app')
 			return true;
 		}
 
-		function isValid() {
+		function ValidEmail() {
 			if(!isValidEmail()) {
 				return;
 			}
 			if (!validForm.isNotEmpty($scope.emailModificationInfo.code)) {
 				Tip.showTip('验证码不能为空');
 				return false;
-			}else if (!validForm.isEqual($scope.emailModificationInfo.code,  $scope.code)) {
+			}else if (!validForm.isEqual($scope.emailModificationInfo.code,  $scope.EmailCode)) {
 				Tip.showTip('验证码不正确');
 				return false;
 			} else if (!validForm.isNotEmpty($scope.emailModificationInfo.pwd)) {
@@ -332,12 +356,13 @@ angular.module('app')
 
 			$scope.commit = function () {
 			console.log($scope.emailModificationInfo)
-			if (!isValid()) {return};
+			if (!ValidEmail()) {return};
 			Tip.loadTips.showLoading();
 			API.fetchPost('http://127.0.0.1:9000/modifypwd', $scope.emailModificationInfo)
 				.then(function (data) {
+					console.log(data)
 					Tip.loadTips.hideLoading();
-					if (data.data.statusCode == 800) {
+					if (data.data.statusCode == 500) {
 						Tip.showTip(data.data.msg);
 					}
 				})
@@ -347,8 +372,7 @@ angular.module('app')
 				})
 		}
 		$scope.commits=function(){
-			console.log('asdf')
-			if (isValid()) {
+			if (ValidEmail()) {
 				$scope.commit();
 				$scope.type='login';
 			}else{return};

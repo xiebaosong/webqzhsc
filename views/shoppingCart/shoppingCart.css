@@ -20,3 +20,28 @@
 .shoppingCart .bj{
 	background-color: #fff;
 }
+.shoppingCart .chec{
+	position: relative;
+    width: 28px;
+    height: 28px;
+	top: 35px;
+}
+.shoppingCart .che{
+	position: relative;
+    width: 28px;
+    height: 28px;
+	top: -3px;
+}
+.shoppingCart .item-top{
+	margin-top: 10px;
+}
+.shoppingCart .input{
+	border-style: none;
+}
+.shoppingCart .sum{
+	border-style: none;
+	width: 50px
+}
+.shoppingCart .closing{
+	margin-left: 10px;
+}

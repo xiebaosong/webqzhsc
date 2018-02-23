@@ -13,31 +13,32 @@
 			<div class="clear" >
 				<!-- 注册 -->
 				<div ng-switch-when="register">
-				  <div class="item la item-input la item-icon-left">
-				  	<i class="icon ion-person"></i>
-				    <input ng-model="userInfo.name" ng-keyup="isValidName()" type="text" placeholder="输入会员名或手机号" />
-				  </div>
-
-				  <div class="item la item-input la item-icon-left">
-				  	<i class="icon ion-android-lock"></i>
-				    <input ng-model="userInfo.pwd" type="password" placeholder="请输入密码"/>
-				  </div>
-
-				  <div class="item la item-input la item-icon-left">
-				  	<i class="icon ion-android-lock"></i>
-				    <input ng-model="userInfo.repwd" type="password" placeholder="确认密码"/>
-				  </div>
-
-				  <div class="item la item-input la item-icon-left">
+					<div class="item la item-input la item-icon-left">
 				  	<i class="icon ion-android-phone-portrait"></i>
-				    <input ng-model="userInfo.phone" ng-keyup="isPhone()" type="text" placeholder="请输入手机号码"/>
+				    <input ng-model="userInfo.phone" ng-keyup="isPhone()" type="text" placeholder="请输入手机号码" value=""/>
 				    <span class="fr authCode" ng-show="isPass" ng-click="getCode()"><button>获取验证码</button></span>
 				  </div>
 
 				  <div class="item la item-input la item-icon-left">
 				  	<i class="icon ion-social-angular"></i>
-				    <input ng-model="userInfo.code" type="text" placeholder="请输入验证码"/>
-				  </div> 
+				    <input ng-model="userInfo.code" type="text" placeholder="请输入验证码" value=""/>
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-person"></i>
+				    <input ng-model="userInfo.name" ng-keyup="isValidName()" type="text" placeholder="输入会员名或手机号" value="" />
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-android-lock"></i>
+				    <input ng-model="userInfo.pwd" type="password" placeholder="请输入密码" value="" />
+				  </div>
+
+				  <div class="item la item-input la item-icon-left">
+				  	<i class="icon ion-android-lock"></i>
+				    <input ng-model="userInfo.repwd" type="password" placeholder="确认密码" value=""/>
+				  </div>
+ 
 				</div>
 			</div>
 			<div ng-switch-when="register" class="padding " >
@@ -57,7 +58,7 @@
 			  <div class="item la item-input la item-icon-left">
 			  	<i class="icon ion-android-phone-portrait"></i>
 			    <input type="text" ng-keyup="verifyEmail()" ng-model="emailModificationInfo.email" placeholder="请输邮箱地址"/>
-			    <span class="fr authCode" ng-show="isPass" ng-click="getCode()">|获取验证码</span>
+			    <span class="fr authCode" ng-show="isPass" ng-click="gitEmailCode()">|获取验证码</span>
 			  </div>
 
 			  <label  class="item la item-input la item-icon-left">
@@ -84,7 +85,7 @@
 			  <div  class="item la item-input la item-icon-left">
 			  	<i class="icon ion-android-phone-portrait"></i>
 			    <input type="text" ng-keyup="verifyPhone()"  ng-model="phoneModificationInfo.phone" placeholder="请输入手机号码"/>
-			    <span class="fr authCode" ng-show="isPass" ng-click="getCode()">|获取验证码</span>
+			    <span class="fr authCode" ng-show="isPass" ng-click="getPhoneCode()">|获取验证码</span>
 			  </div>
 
 			  <label  class="item la item-input la item-icon-left">
